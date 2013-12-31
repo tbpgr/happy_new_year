@@ -1,0 +1,4 @@
+implement 'happy_new_year_core_spec.rb'.
+implement 'happy_new_year_core.rb' your main logic. pass rspec all specs.
+implement bin 'bin/happynewyear'.
+edit 'happy_new_year.gemspec'.

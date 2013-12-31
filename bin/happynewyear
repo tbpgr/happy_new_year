@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require 'happy_new_year_core'
+require 'happy_new_year/version'
+require 'thor'
+
+module HappyNewYear
+  # = HappyNewYear CLI
+  class CLI < Thor
+    class_option :help, type: :boolean, aliases: '-h', desc: 'help message.'
+    class_option :version, type: :boolean, desc: 'version'
+
+    desc 'execute', 'generate Happy New Year html letters'
+    def execute
+      HappyNewYear::Core.new.execute
+    end
+
+    desc 'init', 'generate Happynewyearfile'
+    def init
+      HappyNewYear::Core.new.init
+    end
+
+    desc 'version', 'version'
+    def version
+      p HappyNewYear::VERSION
+    end
+  end
+end
+
+HappyNewYear::CLI.start(ARGV)
