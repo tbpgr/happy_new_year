@@ -1,8 +1,0 @@
-edit 'LICENSE.txt'.
-git add, commit.
-rake install.
-check gem(test using).
-gem uninstall happy_new_year.
-rake release.
-gem install happy_new_year.
-after release check.
