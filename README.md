@@ -104,6 +104,7 @@ happynewyear execute
 ~~~
 
 ## History
+* version 0.0.2 : fix runtime-dependency.
 * version 0.0.1 : first release.
 
 ## Contributing

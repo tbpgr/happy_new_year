@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "thor", "~> 0.18.1"
+  spec.add_runtime_dependency "activesupport", "~> 4.0.1"
+  spec.add_runtime_dependency "activemodel", "~> 4.0.2"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
