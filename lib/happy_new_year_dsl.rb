@@ -2,6 +2,7 @@
 require 'happy_new_year_dsl_model'
 
 module HappyNewYear
+  # Dsl
   class Dsl
     attr_accessor :happy_new_year
 
