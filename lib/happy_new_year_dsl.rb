@@ -9,14 +9,14 @@ module HappyNewYear
     # String Define
     [:filename, :from, :common_message].each do |f|
       define_method f do |value|
-        eval "@happy_new_year.#{f} = '#{value}'", binding
+        @happy_new_year.send("#{f}=", value)
       end
     end
 
     # Array/Hash/Boolean Define
     [:tos, :specific_messages].each do |f|
       define_method f do |value|
-        eval "@happy_new_year.#{f} = #{value}", binding
+        @happy_new_year.send("#{f}=", value)
       end
     end
 
