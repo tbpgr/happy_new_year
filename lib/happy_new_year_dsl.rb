@@ -26,7 +26,8 @@ module HappyNewYear
       @happy_new_year.from = 'your name'
       @happy_new_year.common_message = 'common_message'
       @happy_new_year.tos = ['target name1', 'target name2']
-      @happy_new_year.specific_messages = ['specific message1', 'specific message2']
+      default_sp_message = ['specific message1', 'specific message2']
+      @happy_new_year.specific_messages = default_sp_message
     end
   end
 end

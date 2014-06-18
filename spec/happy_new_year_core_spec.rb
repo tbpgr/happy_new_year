@@ -2,6 +2,7 @@
 require 'spec_helper'
 require 'happy_new_year_core'
 
+# rubocop:disable LineLength
 describe HappyNewYear::Core do
 
   context :init do
@@ -126,5 +127,5 @@ specific_messages ["The best regards next year.", "In fact I love you."]
       end
     end
   end
-
 end
+# rubocop:enable LineLength
