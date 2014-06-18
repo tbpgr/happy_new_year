@@ -80,6 +80,7 @@ specific_messages ["specific message1", "specific message2"]
     end
 
     private
+
     def read_dsl
       File.open(HAPPY_NEW_YEAR_FILE) { |f|f.read }
     end
