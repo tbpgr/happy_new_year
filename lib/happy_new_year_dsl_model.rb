@@ -24,6 +24,5 @@ module HappyNewYear
     # newyear letter specific_messages(for each target)
     attr_accessor :specific_messages
     validates :specific_messages, presence: true
-
   end
 end

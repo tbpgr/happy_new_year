@@ -35,13 +35,13 @@ describe HappyNewYear::Core do
       end
 
       def case_before(c)
-        Dir.mkdir(OUTPUT_DSL_TMP_DIR) unless Dir.exists? OUTPUT_DSL_TMP_DIR
+        Dir.mkdir(OUTPUT_DSL_TMP_DIR) unless Dir.exist? OUTPUT_DSL_TMP_DIR
         Dir.chdir(OUTPUT_DSL_TMP_DIR)
       end
 
       def case_after(c)
         Dir.chdir('../')
-        FileUtils.rm_rf(OUTPUT_DSL_TMP_DIR) if Dir.exists? OUTPUT_DSL_TMP_DIR
+        FileUtils.rm_rf(OUTPUT_DSL_TMP_DIR) if Dir.exist? OUTPUT_DSL_TMP_DIR
       end
     end
   end
@@ -104,7 +104,7 @@ specific_messages ["The best regards next year.", "In fact I love you."]
 
           # -- then --
           c[:expected_file_names].each_with_index do |filename, index|
-            file_exists = File.exists?(filename)
+            file_exists = File.exist?(filename)
             expect(file_exists).to be_true
             file_contents = File.read(filename)
             expect(file_contents).to eq(c[:expected_file_contents][index])
@@ -115,14 +115,14 @@ specific_messages ["The best regards next year.", "In fact I love you."]
       end
 
       def case_before(c)
-        Dir.mkdir(OUTPUT_DSL_TMP_DIR) unless Dir.exists? OUTPUT_DSL_TMP_DIR
+        Dir.mkdir(OUTPUT_DSL_TMP_DIR) unless Dir.exist? OUTPUT_DSL_TMP_DIR
         Dir.chdir(OUTPUT_DSL_TMP_DIR)
         File.open(HappyNewYear::Core::HAPPY_NEW_YEAR_FILE, 'w:utf-8') { |f|f.print c[:input] }
       end
 
       def case_after(c)
         Dir.chdir('../')
-        FileUtils.rm_rf(OUTPUT_DSL_TMP_DIR) if Dir.exists? OUTPUT_DSL_TMP_DIR
+        FileUtils.rm_rf(OUTPUT_DSL_TMP_DIR) if Dir.exist? OUTPUT_DSL_TMP_DIR
       end
     end
   end

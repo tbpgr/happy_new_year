@@ -8,14 +8,14 @@ module HappyNewYear
     # String Define
     [:filename, :from, :common_message].each do |f|
       define_method f do |value|
-        eval "@happy_new_year.#{f.to_s} = '#{value}'", binding
+        eval "@happy_new_year.#{f} = '#{value}'", binding
       end
     end
 
     # Array/Hash/Boolean Define
     [:tos, :specific_messages].each do |f|
       define_method f do |value|
-        eval "@happy_new_year.#{f.to_s} = #{value}", binding
+        eval "@happy_new_year.#{f} = #{value}", binding
       end
     end
 
