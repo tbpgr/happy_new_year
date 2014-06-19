@@ -91,7 +91,7 @@ specific_messages ["specific message1", "specific message2"]
     end
 
     def get_result_html(from, common_message, specific_message, to)
-      message = "To #{to}#{BASIC_SPACE}#{common_message}#{BASIC_SPACE}#{specific_message}#{BASIC_SPACE}From #{from}" # rubocop:disable LineLength
+      message = "To #{to}#{BASIC_SPACE}#{common_message}#{BASIC_SPACE}#{specific_message}#{BASIC_SPACE}From #{from}" # rubocop:disable LineLength, UselessAssignment
       erb = ERB.new(HAPPY_NEW_YEAR_CONTENTS_TEMPLATE)
       erb.result(binding)
     end
