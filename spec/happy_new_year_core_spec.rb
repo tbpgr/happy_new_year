@@ -11,8 +11,8 @@ describe HappyNewYear::Core do
       {
         case_no: 1,
         case_title: 'valid new year mail',
-        expected: HappyNewYear::Core::HAPPY_NEW_YEAR_TEMPLATE,
-      },
+        expected: HappyNewYear::Core::HAPPY_NEW_YEAR_TEMPLATE
+      }
     ]
 
     cases.each do |c|
@@ -88,8 +88,8 @@ specific_messages ["The best regards next year.", "In fact I love you."]
         case_title: 'valid new year output',
         input: NEWYEAR_CASE1_INPUT,
         expected_file_names: ['HappyNewYear1.html', 'HappyNewYear2.html'],
-        expected_file_contents: [NEWYEAR_OUTPUTS1_1, NEWYEAR_OUTPUTS1_2],
-      },
+        expected_file_contents: [NEWYEAR_OUTPUTS1_1, NEWYEAR_OUTPUTS1_2]
+      }
     ]
 
     cases.each do |c|
