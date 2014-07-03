@@ -1,5 +1,7 @@
 # HappyNewYear
 
+[![Gem Version](https://badge.fury.io/rb/happy_new_year.svg)](http://badge.fury.io/rb/happy_new_year)
+
 HappyNewYear generates 'happy new year html-letters'.
 
 ## Purpose
